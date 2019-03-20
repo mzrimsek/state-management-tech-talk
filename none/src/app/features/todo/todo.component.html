@@ -1,0 +1,8 @@
+<app-add-item (addItem)="addItem($event)"></app-add-item>
+<ul class="todos">
+  <li class="todo"
+      *ngFor="let item of getItems()">
+    <app-todo-item [item]="item"></app-todo-item>
+    <button (click)="removeTodo(item.id)">Done</button>
+  </li>
+</ul>
